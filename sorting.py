@@ -21,7 +21,12 @@ def main():
             print(values)
         print("Elapsed time: %.3f" % (endTime - startTime))
         y.append((endTime - startTime))
+
     plt.plot(x, y)
+    plt.plot(x, y, label="Selection Sort")
+    legend = plt.legend(loc='upper center', shadow=True, fontsize='x-large')
+    legend.get_frame().set_facecolor('#00FFCC')
+
     plt.ylabel('Time')
     plt.xlabel('Number of Items')
     plt.show()
